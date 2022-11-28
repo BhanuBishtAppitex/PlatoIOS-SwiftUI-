@@ -9,9 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            Color(C.Colors.accentColor).ignoresSafeArea()
+            Text("PLATO").font(.custom(C.Fonts.Monoton.medium, size: 50))
+           IntroductoryPage()
+            
+        }
     }
+   
 }
 
 struct ContentView_Previews: PreviewProvider {

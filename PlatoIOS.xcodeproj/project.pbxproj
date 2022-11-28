@@ -11,6 +11,16 @@
 		52E715EF293482A500B856E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E715EE293482A500B856E0 /* ContentView.swift */; };
 		52E715F1293482A700B856E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E715F0293482A700B856E0 /* Assets.xcassets */; };
 		52E715F4293482A700B856E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E715F3293482A700B856E0 /* Preview Assets.xcassets */; };
+		52E715FF2934833C00B856E0 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52E715FB2934833C00B856E0 /* Poppins-Regular.ttf */; };
+		52E716002934833C00B856E0 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52E715FC2934833C00B856E0 /* Poppins-Bold.ttf */; };
+		52E716012934833C00B856E0 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52E715FD2934833C00B856E0 /* Poppins-Medium.ttf */; };
+		52E716022934833C00B856E0 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52E715FE2934833C00B856E0 /* Poppins-SemiBold.ttf */; };
+		52E716062934845300B856E0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E716052934845300B856E0 /* Constants.swift */; };
+		52E716082934863100B856E0 /* Monoton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52E716072934863100B856E0 /* Monoton-Regular.ttf */; };
+		52E7160D293487A400B856E0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7160C293487A400B856E0 /* Colors.swift */; };
+		52E716112934891700B856E0 /* IntroductoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E716102934891700B856E0 /* IntroductoryPage.swift */; };
+		52E71616293491FD00B856E0 /* ModelForIntroductoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E71615293491FD00B856E0 /* ModelForIntroductoryPage.swift */; };
+		52E716202934979F00B856E0 /* EnterPhoneNumberPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7161F2934979F00B856E0 /* EnterPhoneNumberPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,17 @@
 		52E715EE293482A500B856E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52E715F0293482A700B856E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E715F3293482A700B856E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		52E715FB2934833C00B856E0 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		52E715FC2934833C00B856E0 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		52E715FD2934833C00B856E0 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		52E715FE2934833C00B856E0 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		52E71603293483D000B856E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52E716052934845300B856E0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		52E716072934863100B856E0 /* Monoton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Monoton-Regular.ttf"; sourceTree = "<group>"; };
+		52E7160C293487A400B856E0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		52E716102934891700B856E0 /* IntroductoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductoryPage.swift; sourceTree = "<group>"; };
+		52E71615293491FD00B856E0 /* ModelForIntroductoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForIntroductoryPage.swift; sourceTree = "<group>"; };
+		52E7161F2934979F00B856E0 /* EnterPhoneNumberPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +72,9 @@
 		52E715EB293482A500B856E0 /* PlatoIOS */ = {
 			isa = PBXGroup;
 			children = (
-				52E715EC293482A500B856E0 /* PlatoIOSApp.swift */,
-				52E715EE293482A500B856E0 /* ContentView.swift */,
-				52E715F0293482A700B856E0 /* Assets.xcassets */,
+				52E71603293483D000B856E0 /* Info.plist */,
+				52E716092934874800B856E0 /* Additional */,
+				52E7160A2934877200B856E0 /* Pages */,
 				52E715F2293482A700B856E0 /* Preview Content */,
 			);
 			path = PlatoIOS;
@@ -65,6 +86,145 @@
 				52E715F3293482A700B856E0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52E715FA2934830C00B856E0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				52E716072934863100B856E0 /* Monoton-Regular.ttf */,
+				52E715FC2934833C00B856E0 /* Poppins-Bold.ttf */,
+				52E715FD2934833C00B856E0 /* Poppins-Medium.ttf */,
+				52E715FB2934833C00B856E0 /* Poppins-Regular.ttf */,
+				52E715FE2934833C00B856E0 /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		52E716042934844000B856E0 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				52E716052934845300B856E0 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		52E716092934874800B856E0 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				52E7160B2934878900B856E0 /* Colors */,
+				52E715FA2934830C00B856E0 /* Fonts */,
+				52E716042934844000B856E0 /* Constants */,
+				52E715F0293482A700B856E0 /* Assets.xcassets */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		52E7160A2934877200B856E0 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				52E7160E293488E200B856E0 /* SplashPage */,
+				52E7160F293488E900B856E0 /* IntroductoryPage */,
+				52E716192934975F00B856E0 /* VerificationPages */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		52E7160B2934878900B856E0 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				52E7160C293487A400B856E0 /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		52E7160E293488E200B856E0 /* SplashPage */ = {
+			isa = PBXGroup;
+			children = (
+				52E715EC293482A500B856E0 /* PlatoIOSApp.swift */,
+				52E715EE293482A500B856E0 /* ContentView.swift */,
+			);
+			path = SplashPage;
+			sourceTree = "<group>";
+		};
+		52E7160F293488E900B856E0 /* IntroductoryPage */ = {
+			isa = PBXGroup;
+			children = (
+				52E71614293491EC00B856E0 /* Model */,
+				52E71613293491E500B856E0 /* View */,
+				52E71612293491DB00B856E0 /* Controller */,
+			);
+			path = IntroductoryPage;
+			sourceTree = "<group>";
+		};
+		52E71612293491DB00B856E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52E71613293491E500B856E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52E716102934891700B856E0 /* IntroductoryPage.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		52E71614293491EC00B856E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52E71615293491FD00B856E0 /* ModelForIntroductoryPage.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		52E716192934975F00B856E0 /* VerificationPages */ = {
+			isa = PBXGroup;
+			children = (
+				52E7161A2934977100B856E0 /* EnterPhoneNumberPage */,
+				52E7161B2934977900B856E0 /* EnterOTPPage */,
+			);
+			path = VerificationPages;
+			sourceTree = "<group>";
+		};
+		52E7161A2934977100B856E0 /* EnterPhoneNumberPage */ = {
+			isa = PBXGroup;
+			children = (
+				52E7161E2934979100B856E0 /* Model */,
+				52E7161D2934978D00B856E0 /* View */,
+				52E7161C2934978400B856E0 /* Controller */,
+			);
+			path = EnterPhoneNumberPage;
+			sourceTree = "<group>";
+		};
+		52E7161B2934977900B856E0 /* EnterOTPPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EnterOTPPage;
+			sourceTree = "<group>";
+		};
+		52E7161C2934978400B856E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52E7161D2934978D00B856E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52E7161F2934979F00B856E0 /* EnterPhoneNumberPage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52E7161E2934979100B856E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +285,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E715FF2934833C00B856E0 /* Poppins-Regular.ttf in Resources */,
+				52E716082934863100B856E0 /* Monoton-Regular.ttf in Resources */,
 				52E715F4293482A700B856E0 /* Preview Assets.xcassets in Resources */,
 				52E715F1293482A700B856E0 /* Assets.xcassets in Resources */,
+				52E716022934833C00B856E0 /* Poppins-SemiBold.ttf in Resources */,
+				52E716002934833C00B856E0 /* Poppins-Bold.ttf in Resources */,
+				52E716012934833C00B856E0 /* Poppins-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +303,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E715EF293482A500B856E0 /* ContentView.swift in Sources */,
+				52E716112934891700B856E0 /* IntroductoryPage.swift in Sources */,
+				52E71616293491FD00B856E0 /* ModelForIntroductoryPage.swift in Sources */,
+				52E7160D293487A400B856E0 /* Colors.swift in Sources */,
+				52E716202934979F00B856E0 /* EnterPhoneNumberPage.swift in Sources */,
 				52E715ED293482A500B856E0 /* PlatoIOSApp.swift in Sources */,
+				52E716062934845300B856E0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +440,7 @@
 				DEVELOPMENT_TEAM = KFSUX4TS86;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlatoIOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +470,7 @@
 				DEVELOPMENT_TEAM = KFSUX4TS86;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlatoIOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
