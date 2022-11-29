@@ -26,6 +26,7 @@ struct C {
         static let textPrimary: String = "TextPrimary"
         static let textSecondary: String = "TextSecondary"
         static let textBlur: String = "TextBlur"
+        static let blueBlur: String = "BlueBlur"
     
     }
 }

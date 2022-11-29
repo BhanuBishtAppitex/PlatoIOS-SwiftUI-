@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+   
     var body: some View {
-        ZStack {
-            Color(C.Colors.accentColor).ignoresSafeArea()
-            Text("PLATO").font(.custom(C.Fonts.Monoton.medium, size: 50))
-           IntroductoryPage()
             
+        NavigationView {
+            ZStack {
+                Color(C.Colors.accentColor).ignoresSafeArea()
+                Text("PLATO").font(.custom(C.Fonts.Monoton.medium, size: 50))
+                    
+                NavigationLink(destination: IntroductoryPage()) {
+                    Text("DemoText")
+                }
+                
+               
+                
+            }
         }
+        
     }
+    
+    
    
 }
 

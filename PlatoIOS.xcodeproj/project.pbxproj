@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52155AC82935DDB9001FE70E /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52155AC72935DDB9001FE70E /* ChatView.swift */; };
+		52155ACA293601D8001FE70E /* ChatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52155AC9293601D8001FE70E /* ChatData.swift */; };
+		522B65ED2935C51000AB8367 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B65EC2935C51000AB8367 /* MainTabBar.swift */; };
+		522B65F42935C6F500AB8367 /* CallsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B65F32935C6F500AB8367 /* CallsPage.swift */; };
+		522B65F62935C71300AB8367 /* StatusPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B65F52935C71300AB8367 /* StatusPage.swift */; };
+		522B65FB2935C99400AB8367 /* ModelForStatusPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B65FA2935C99400AB8367 /* ModelForStatusPage.swift */; };
+		522D7A4A2934E1A70059668A /* ModelForProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D7A492934E1A70059668A /* ModelForProfilePage.swift */; };
+		522D7A4D2934E3990059668A /* ProfilePageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D7A4C2934E3990059668A /* ProfilePageRow.swift */; };
+		526FF2F62934C8F700A193BD /* MessagesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF2F52934C8F700A193BD /* MessagesPage.swift */; };
+		526FF2F92934CA0A00A193BD /* MessagesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF2F82934CA0A00A193BD /* MessagesRow.swift */; };
+		526FF2FE2934CC3F00A193BD /* ModelForMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF2FD2934CC3F00A193BD /* ModelForMessages.swift */; };
+		526FF3042934D56000A193BD /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF3032934D56000A193BD /* SettingsPage.swift */; };
+		526FF3062934D57000A193BD /* SettingPageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF3052934D57000A193BD /* SettingPageRow.swift */; };
+		526FF3082934D5E200A193BD /* ModelForSettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF3072934D5E200A193BD /* ModelForSettingsPage.swift */; };
+		526FF30B2934DBC800A193BD /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF30A2934DBC800A193BD /* ProfilePage.swift */; };
+		527C5AF5293639CE00C2DEA3 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527C5AF4293639CE00C2DEA3 /* TopBarView.swift */; };
+		527C5AF829363C9600C2DEA3 /* DataModelForCallsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527C5AF729363C9600C2DEA3 /* DataModelForCallsPage.swift */; };
+		527C5AFA2936415F00C2DEA3 /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527C5AF92936415F00C2DEA3 /* CustomHeaderView.swift */; };
 		52E715ED293482A500B856E0 /* PlatoIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E715EC293482A500B856E0 /* PlatoIOSApp.swift */; };
 		52E715EF293482A500B856E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E715EE293482A500B856E0 /* ContentView.swift */; };
 		52E715F1293482A700B856E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E715F0293482A700B856E0 /* Assets.xcassets */; };
@@ -21,9 +39,29 @@
 		52E716112934891700B856E0 /* IntroductoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E716102934891700B856E0 /* IntroductoryPage.swift */; };
 		52E71616293491FD00B856E0 /* ModelForIntroductoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E71615293491FD00B856E0 /* ModelForIntroductoryPage.swift */; };
 		52E716202934979F00B856E0 /* EnterPhoneNumberPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7161F2934979F00B856E0 /* EnterPhoneNumberPage.swift */; };
+		52E716252934ABE000B856E0 /* OTPVerificationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E716242934ABE000B856E0 /* OTPVerificationPage.swift */; };
+		52E7162B2934B48D00B856E0 /* AddCoverImagePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7162A2934B48D00B856E0 /* AddCoverImagePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52155AC72935DDB9001FE70E /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		52155AC9293601D8001FE70E /* ChatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatData.swift; sourceTree = "<group>"; };
+		522B65EC2935C51000AB8367 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		522B65F32935C6F500AB8367 /* CallsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsPage.swift; sourceTree = "<group>"; };
+		522B65F52935C71300AB8367 /* StatusPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPage.swift; sourceTree = "<group>"; };
+		522B65FA2935C99400AB8367 /* ModelForStatusPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForStatusPage.swift; sourceTree = "<group>"; };
+		522D7A492934E1A70059668A /* ModelForProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForProfilePage.swift; sourceTree = "<group>"; };
+		522D7A4C2934E3990059668A /* ProfilePageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageRow.swift; sourceTree = "<group>"; };
+		526FF2F52934C8F700A193BD /* MessagesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesPage.swift; sourceTree = "<group>"; };
+		526FF2F82934CA0A00A193BD /* MessagesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesRow.swift; sourceTree = "<group>"; };
+		526FF2FD2934CC3F00A193BD /* ModelForMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForMessages.swift; sourceTree = "<group>"; };
+		526FF3032934D56000A193BD /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
+		526FF3052934D57000A193BD /* SettingPageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageRow.swift; sourceTree = "<group>"; };
+		526FF3072934D5E200A193BD /* ModelForSettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForSettingsPage.swift; sourceTree = "<group>"; };
+		526FF30A2934DBC800A193BD /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		527C5AF4293639CE00C2DEA3 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
+		527C5AF729363C9600C2DEA3 /* DataModelForCallsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelForCallsPage.swift; sourceTree = "<group>"; };
+		527C5AF92936415F00C2DEA3 /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
 		52E715E9293482A500B856E0 /* PlatoIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatoIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E715EC293482A500B856E0 /* PlatoIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatoIOSApp.swift; sourceTree = "<group>"; };
 		52E715EE293482A500B856E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +78,8 @@
 		52E716102934891700B856E0 /* IntroductoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductoryPage.swift; sourceTree = "<group>"; };
 		52E71615293491FD00B856E0 /* ModelForIntroductoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForIntroductoryPage.swift; sourceTree = "<group>"; };
 		52E7161F2934979F00B856E0 /* EnterPhoneNumberPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberPage.swift; sourceTree = "<group>"; };
+		52E716242934ABE000B856E0 /* OTPVerificationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationPage.swift; sourceTree = "<group>"; };
+		52E7162A2934B48D00B856E0 /* AddCoverImagePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoverImagePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +93,214 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52155AC62935DDAB001FE70E /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				52155AC72935DDB9001FE70E /* ChatView.swift */,
+				52155AC9293601D8001FE70E /* ChatData.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		522B65EB2935C50000AB8367 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				522B65EC2935C51000AB8367 /* MainTabBar.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		522B65EE2935C6AB00AB8367 /* StatusPage */ = {
+			isa = PBXGroup;
+			children = (
+				522B65F92935C98100AB8367 /* Model */,
+				522B65F82935C97B00AB8367 /* View */,
+				522B65F72935C97600AB8367 /* Controller */,
+			);
+			path = StatusPage;
+			sourceTree = "<group>";
+		};
+		522B65EF2935C6D700AB8367 /* CallsPage */ = {
+			isa = PBXGroup;
+			children = (
+				522B65F22935C6EA00AB8367 /* Model */,
+				522B65F12935C6E600AB8367 /* View */,
+				522B65F02935C6E100AB8367 /* Controller */,
+			);
+			path = CallsPage;
+			sourceTree = "<group>";
+		};
+		522B65F02935C6E100AB8367 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				522B65F32935C6F500AB8367 /* CallsPage.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		522B65F12935C6E600AB8367 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		522B65F22935C6EA00AB8367 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				527C5AF729363C9600C2DEA3 /* DataModelForCallsPage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		522B65F72935C97600AB8367 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		522B65F82935C97B00AB8367 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				522B65F52935C71300AB8367 /* StatusPage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		522B65F92935C98100AB8367 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				522B65FA2935C99400AB8367 /* ModelForStatusPage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		526FF2F32934C8E300A193BD /* MainPages */ = {
+			isa = PBXGroup;
+			children = (
+				522B65EB2935C50000AB8367 /* TabBar */,
+				522B65EE2935C6AB00AB8367 /* StatusPage */,
+				526FF2F42934C8E900A193BD /* MessagesPage */,
+				522B65EF2935C6D700AB8367 /* CallsPage */,
+				526FF2FF2934D53900A193BD /* SettingPage */,
+				526FF3092934DBB700A193BD /* ProfilePage */,
+			);
+			path = MainPages;
+			sourceTree = "<group>";
+		};
+		526FF2F42934C8E900A193BD /* MessagesPage */ = {
+			isa = PBXGroup;
+			children = (
+				52155AC62935DDAB001FE70E /* SubView */,
+				526FF2FA2934CBFE00A193BD /* Model */,
+				526FF2FC2934CC0B00A193BD /* View */,
+				526FF2FB2934CC0500A193BD /* Controller */,
+			);
+			path = MessagesPage;
+			sourceTree = "<group>";
+		};
+		526FF2FA2934CBFE00A193BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				526FF2FD2934CC3F00A193BD /* ModelForMessages.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		526FF2FB2934CC0500A193BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		526FF2FC2934CC0B00A193BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				526FF2F52934C8F700A193BD /* MessagesPage.swift */,
+				526FF2F82934CA0A00A193BD /* MessagesRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		526FF2FF2934D53900A193BD /* SettingPage */ = {
+			isa = PBXGroup;
+			children = (
+				526FF3022934D54C00A193BD /* Model */,
+				526FF3012934D54600A193BD /* View */,
+				526FF3002934D54100A193BD /* Controller */,
+			);
+			path = SettingPage;
+			sourceTree = "<group>";
+		};
+		526FF3002934D54100A193BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		526FF3012934D54600A193BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				526FF3032934D56000A193BD /* SettingsPage.swift */,
+				526FF3052934D57000A193BD /* SettingPageRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		526FF3022934D54C00A193BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				526FF3072934D5E200A193BD /* ModelForSettingsPage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		526FF3092934DBB700A193BD /* ProfilePage */ = {
+			isa = PBXGroup;
+			children = (
+				526FF30E2934E15A00A193BD /* Model */,
+				526FF30D2934E15600A193BD /* View */,
+				526FF30C2934E14A00A193BD /* Controller */,
+			);
+			path = ProfilePage;
+			sourceTree = "<group>";
+		};
+		526FF30C2934E14A00A193BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		526FF30D2934E15600A193BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				526FF30A2934DBC800A193BD /* ProfilePage.swift */,
+				522D7A4C2934E3990059668A /* ProfilePageRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		526FF30E2934E15A00A193BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				522D7A492934E1A70059668A /* ModelForProfilePage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		527C5AF3293639C100C2DEA3 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				527C5AF4293639CE00C2DEA3 /* TopBarView.swift */,
+				527C5AF92936415F00C2DEA3 /* CustomHeaderView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		52E715E0293482A500B856E0 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +359,7 @@
 		52E716092934874800B856E0 /* Additional */ = {
 			isa = PBXGroup;
 			children = (
+				527C5AF3293639C100C2DEA3 /* CustomViews */,
 				52E7160B2934878900B856E0 /* Colors */,
 				52E715FA2934830C00B856E0 /* Fonts */,
 				52E716042934844000B856E0 /* Constants */,
@@ -125,6 +374,7 @@
 				52E7160E293488E200B856E0 /* SplashPage */,
 				52E7160F293488E900B856E0 /* IntroductoryPage */,
 				52E716192934975F00B856E0 /* VerificationPages */,
+				526FF2F32934C8E300A193BD /* MainPages */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -184,6 +434,7 @@
 			children = (
 				52E7161A2934977100B856E0 /* EnterPhoneNumberPage */,
 				52E7161B2934977900B856E0 /* EnterOTPPage */,
+				52E716262934B45700B856E0 /* AddCoverImagePage */,
 			);
 			path = VerificationPages;
 			sourceTree = "<group>";
@@ -201,6 +452,9 @@
 		52E7161B2934977900B856E0 /* EnterOTPPage */ = {
 			isa = PBXGroup;
 			children = (
+				52E716232934ABC200B856E0 /* Model */,
+				52E716222934ABBD00B856E0 /* View */,
+				52E716212934ABB400B856E0 /* Controller */,
 			);
 			path = EnterOTPPage;
 			sourceTree = "<group>";
@@ -221,6 +475,60 @@
 			sourceTree = "<group>";
 		};
 		52E7161E2934979100B856E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52E716212934ABB400B856E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52E716222934ABBD00B856E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52E716242934ABE000B856E0 /* OTPVerificationPage.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52E716232934ABC200B856E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52E716262934B45700B856E0 /* AddCoverImagePage */ = {
+			isa = PBXGroup;
+			children = (
+				52E716292934B47E00B856E0 /* Model */,
+				52E716282934B47B00B856E0 /* View */,
+				52E716272934B47700B856E0 /* Controller */,
+			);
+			path = AddCoverImagePage;
+			sourceTree = "<group>";
+		};
+		52E716272934B47700B856E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				52E7162A2934B48D00B856E0 /* AddCoverImagePage.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52E716282934B47B00B856E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52E716292934B47E00B856E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -302,13 +610,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527C5AF5293639CE00C2DEA3 /* TopBarView.swift in Sources */,
+				526FF2F62934C8F700A193BD /* MessagesPage.swift in Sources */,
+				526FF30B2934DBC800A193BD /* ProfilePage.swift in Sources */,
+				52155AC82935DDB9001FE70E /* ChatView.swift in Sources */,
+				52155ACA293601D8001FE70E /* ChatData.swift in Sources */,
+				522B65F42935C6F500AB8367 /* CallsPage.swift in Sources */,
+				522B65ED2935C51000AB8367 /* MainTabBar.swift in Sources */,
+				526FF3042934D56000A193BD /* SettingsPage.swift in Sources */,
+				522D7A4D2934E3990059668A /* ProfilePageRow.swift in Sources */,
 				52E715EF293482A500B856E0 /* ContentView.swift in Sources */,
+				527C5AFA2936415F00C2DEA3 /* CustomHeaderView.swift in Sources */,
 				52E716112934891700B856E0 /* IntroductoryPage.swift in Sources */,
+				526FF3062934D57000A193BD /* SettingPageRow.swift in Sources */,
 				52E71616293491FD00B856E0 /* ModelForIntroductoryPage.swift in Sources */,
+				526FF2F92934CA0A00A193BD /* MessagesRow.swift in Sources */,
+				522D7A4A2934E1A70059668A /* ModelForProfilePage.swift in Sources */,
+				522B65FB2935C99400AB8367 /* ModelForStatusPage.swift in Sources */,
+				522B65F62935C71300AB8367 /* StatusPage.swift in Sources */,
+				52E7162B2934B48D00B856E0 /* AddCoverImagePage.swift in Sources */,
 				52E7160D293487A400B856E0 /* Colors.swift in Sources */,
 				52E716202934979F00B856E0 /* EnterPhoneNumberPage.swift in Sources */,
 				52E715ED293482A500B856E0 /* PlatoIOSApp.swift in Sources */,
+				526FF2FE2934CC3F00A193BD /* ModelForMessages.swift in Sources */,
+				527C5AF829363C9600C2DEA3 /* DataModelForCallsPage.swift in Sources */,
 				52E716062934845300B856E0 /* Constants.swift in Sources */,
+				526FF3082934D5E200A193BD /* ModelForSettingsPage.swift in Sources */,
+				52E716252934ABE000B856E0 /* OTPVerificationPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
