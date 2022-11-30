@@ -14,56 +14,58 @@ struct OTPVerificationPage: View {
     
     var body: some View {
         NavigationView {
-            ZStack {
-                Color.white
-                VStack(alignment: .leading){
+            //MARK: - mainView
+            VStack(alignment: .leading){
+                VStack(alignment: .leading, spacing: 6) {
                     Text("Verify it's you")
                         .font(.custom(C.Fonts.Poppins.semiBold, size: 25))
                         .foregroundColor(Color(C.Colors.textPrimary))
-                        .padding(.top, 100)
                     Text("For your security, please enter the code that we’ve sent to your mobile number")
                         .font(.custom(C.Fonts.Poppins.regular, size: 14))
-                        .padding(.top, 6)
                         .foregroundColor(Color(C.Colors.textSecondary))
-                    Text("Enter OTP")
-                        .padding(.top, 20)
-                        .font(.custom(C.Fonts.Poppins.regular, size: 14))
-                        .foregroundColor(Color(C.Colors.accentColor))
-                    OTPView()
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("29:25")
-                                .font(.custom(C.Fonts.Poppins.semiBold, size: 17))
-                                .foregroundColor(Color(C.Colors.textPrimary))
-                            HStack(spacing: 18) {
-                                Button {
-                                    print("relode button pressed")
-                                } label: {
-                                    Image("Reload")
-                                        .frame(maxWidth: 20, maxHeight: 20)
-                                }
-                                Text("Resend the Code")
-                                    .font(.custom(C.Fonts.Poppins.semiBold, size: 17))
-                                    .foregroundColor(Color(C.Colors.blueBlur))
-                                    .padding(.leading, 0)
-                            }
-                        }
-                        Spacer()
-                        NavigationLink(destination: AddCoverImagePage(), isActive: $isLinkActivate) {
+                }
+                Spacer()
+                Text("Enter OTP")
+                    .font(.custom(C.Fonts.Poppins.regular, size: 14))
+                    .foregroundColor(Color(C.Colors.accentColor))
+                //MARK: - OTPView
+                OTPView()
+                Spacer()
+                //MARK: - BottomView
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("29:25")
+                            .font(.custom(C.Fonts.Poppins.semiBold, size: 17))
+                            .foregroundColor(Color(C.Colors.textPrimary))
+                        HStack(spacing: 18) {
                             Button {
-                                print("confirm otp button pressed")
-                                self.isLinkActivate = true
+                                print("relode button pressed")
                             } label: {
-                               Image("OtpVerificationButton")
+                                Image("Reload")
+                                    .frame(maxWidth: 20, maxHeight: 20)
                             }
+                            Text("Resend the Code")
+                                .font(.custom(C.Fonts.Poppins.semiBold, size: 17))
+                                .foregroundColor(Color(C.Colors.blueBlur))
+                                .padding(.leading, 0)
                         }
-                        .frame(maxWidth: 53, maxHeight: 53)
-                    }.padding()
-                        .frame(height: 58)
+                    }
                     Spacer()
-                    
-                }.padding(.horizontal, 16)
-            }
+                    NavigationLink(destination: AddCoverImagePage(), isActive: $isLinkActivate) {
+                        Button {
+                            print("confirm otp button pressed")
+                            self.isLinkActivate = true
+                        } label: {
+                            Image("OtpVerificationButton")
+                        }
+                    }
+                    .frame(maxWidth: 53, maxHeight: 53)
+                }.padding()
+                    //.frame(height: 58)
+                Spacer()
+                Spacer()
+                
+            }.padding(.horizontal, 16)
         }.navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
             .ignoresSafeArea()
@@ -72,7 +74,7 @@ struct OTPVerificationPage: View {
 
 struct OTPVerificationPage_Previews: PreviewProvider {
     static var previews: some View {
-        OTPVerificationPage()
+        OTPView()
     }
 }
 
@@ -87,42 +89,19 @@ struct OTPView: View {
     
     var body: some View {
         HStack {
-            VStack {
-                TextField(text: $otpOne) {
-                }.frame(minWidth: 49)
-                Rectangle()
-                    .foregroundColor(Color.gray)
-                    .frame(maxHeight: 1)
-            }
-            VStack {
-                TextField(text: $otpOne) {
-                }.frame(minWidth: 49)
-                Rectangle()
-                    .foregroundColor(Color.gray)
-                    .frame(maxHeight: 1)
-            }
-            VStack {
-                TextField(text: $otpOne) {
-                }.frame(minWidth: 49)
-                Rectangle()
-                    .foregroundColor(Color.gray)
-                    .frame(maxHeight: 1)
-            }
-            VStack {
-                TextField(text: $otpOne) {
-                    
-                }.frame(minWidth: 49)
-                Rectangle()
-                    .foregroundColor(Color.gray)
-                    .frame(maxHeight: 1)
-            }
-        }.padding(.top, 50)
+            CustomTextField(text: otpOne, placeholderText: "")
+                .multilineTextAlignment(.center)
+            CustomTextField(text: otpTwo, placeholderText: "")
+                .multilineTextAlignment(.center)
+            CustomTextField(text: otpThree, placeholderText: "")
+                .multilineTextAlignment(.center)
+            CustomTextField(text: otpFour, placeholderText: "")
+                .multilineTextAlignment(.center)
+        }.padding(.top, 20)
+        .padding(.bottom, 10)
         Spacer()
     }
 }
 
-struct OTPViewPreviews: PreviewProvider {
-    static var previews: some View {
-        OTPView()
-    }
-}
+
+

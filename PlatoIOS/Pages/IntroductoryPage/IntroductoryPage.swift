@@ -15,60 +15,66 @@ struct IntroductoryPage: View {
     @State var mainImage: String = ModelForIntroductoryPage.mainImage[0]
     var numberOfPages = ModelForIntroductoryPage.mainText.count
     @State var currentPage: Int = 0
-    
     @State var isLinkActive = false
-    
-    
-    
     
     var body: some View {
         NavigationView {
-            ZStack {
-                Color.white.ignoresSafeArea()
-                VStack {
-                    Image(mainImage)
-                        .padding()
+            //MARK: - MainView
+            VStack {
+                // main image
+                Image(mainImage)
+                    .resizable()
+                    .frame(width: UIScreen.main.bounds.width-40, height: UIScreen.main.bounds.width-40, alignment: .center)
+                    .padding(.top, 40)
+                Spacer()
+                Spacer()
+                // introductory text
+                VStack(alignment: .center, spacing: 10) {
                     Text(mainText)
-                                   .font(.custom(C.Fonts.Poppins.semiBold, size: 30))
-                                   .padding()
+                        .font(.custom(C.Fonts.Poppins.semiBold, size: 30))
                     Text(secondText)
-                                    .font(.custom(C.Fonts.Poppins.regular, size: 14))
-                                    .foregroundColor(Color(C.Colors.textBlur))
-                                    .multilineTextAlignment(.center)
-                                    .lineLimit(3)
-                                    .padding(.horizontal, 58)
-                    
-                    NavigationLink(destination: EnterPhoneNumberPage(), isActive: $isLinkActive) {
-                        Button {
-                            if currentPage < numberOfPages-1 {
-                                let pageNumber = currentPage+1
-                                mainText = data.mainText[pageNumber]
-                                secondText = data.secondText[pageNumber]
-                                currentPage = pageNumber
-                            } else {
-                                print("next button pressed")
-                                self.isLinkActive = true
-                             
-                            }
-                        } label: {
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 10)
-                                    .frame(maxHeight: 49)
-                                    .padding(.horizontal)
-                                Text("Continue").font(.custom(C.Fonts.Poppins.semiBold, size: 17))
-                                    .foregroundColor(.white)
-                            }
-                        }
-                    }
-                    
-                    Text("By continuing you agree to the terms of use")
                         .font(.custom(C.Fonts.Poppins.regular, size: 14))
                         .foregroundColor(Color(C.Colors.textBlur))
-                        .padding()
+                        .fixedSize(horizontal: false, vertical: true)
+                }.multilineTextAlignment(.center)
+                Spacer()
+                Spacer()
+                // button
+                NavigationLink(destination: EnterPhoneNumberPage(), isActive: $isLinkActive) {
+                    Button {
+                        if currentPage < numberOfPages-1 {
+                            let pageNumber = currentPage+1
+                            mainText = data.mainText[pageNumber]
+                            secondText = data.secondText[pageNumber]
+                            currentPage = pageNumber
+                        } else {
+                            print("next button pressed")
+                            self.isLinkActive = true
+                            
+                        }
+                    } label: {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(height: 49)
+                                .padding(.horizontal)
+                            Text("Continue").font(.custom(C.Fonts.Poppins.semiBold, size: 17))
+                                .foregroundColor(.white)
+                        }
+                    }
                 }
-            }
-        }.ignoresSafeArea()
-            
+                
+                Spacer()
+                // terms and condition text
+                Text("By continuing you agree to the terms of use")
+                    .font(.custom(C.Fonts.Poppins.regular, size: 14))
+                    .foregroundColor(Color(C.Colors.textBlur))
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: true, vertical: false)
+                    .padding(.horizontal,40)
+                Spacer()
+            }.padding()
+                .ignoresSafeArea()
+        }
     }
 }
 

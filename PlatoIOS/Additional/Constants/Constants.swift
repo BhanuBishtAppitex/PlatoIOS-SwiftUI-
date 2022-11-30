@@ -27,6 +27,7 @@ struct C {
         static let textSecondary: String = "TextSecondary"
         static let textBlur: String = "TextBlur"
         static let blueBlur: String = "BlueBlur"
+        static let underlineColor: String = "UnderlineColor"
     
     }
 }

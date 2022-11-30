@@ -11,12 +11,10 @@ struct StatusPage: View {
     @State var navBarHidden: Bool = true
     var body: some View {
         NavigationView {
-            ZStack(alignment: .center) {
-                Color.white
-                VStack{
-                    TopBarView(titleText: "Status", rightIcon: "SearchIcon")
-                    StatusRow()
-                }
+            //MARK: - MainView
+            VStack{
+                TopBarView(titleText: "Status", rightIcon: "SearchIcon")
+                StatusRow()
             }.ignoresSafeArea()
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarTitle("Hidden Title")
@@ -24,55 +22,55 @@ struct StatusPage: View {
                 .onAppear {
                     self.navBarHidden = true
                 }
-                .navigationBarBackButtonHidden(true)
-        }
+                
+        }.navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 struct StatusPage_Previews: PreviewProvider {
     static var previews: some View {
-       StatusPage()
+        StatusPage()
     }
 }
 
+
 //MARK: - Status Row View
 
-
 struct StatusRow: View {
-    
-    private var data = DataForStatusPage.data
-    private var dataTwo = DataForStatusPage.dataTwo
-    
+    private var dataForRecentUpdates = DataForStatusPage.dataForRecentUpdates
+    private var dataForViewedUpdates = DataForStatusPage.dataForViewedUpdates
     
     var body: some View {
-        ZStack {
-            Color.white
-            List {
-                Section {
-                    ForEach(data, id: \.id) { result in
-                        StatusCell(nameText: result.nameText, timeText: result.timeText)
-                    }
+        //MARK: - ListView
+        List {
+            //MARK: - Recent Updates
+            Section(header: HStack {
+                CustomHeaderView(titleText: "Recent Updates")
+                Spacer()
+            }.listRowInsets(EdgeInsets(top: 1, leading: 0, bottom: 1, trailing: 1))
+                .background(Color.white)
+                    , content: {
+                ForEach(dataForRecentUpdates, id: \.id) { result in
+                    StatusCell(nameText: result.nameText, timeText: result.timeText)
                 }
-                header: {
-                    CustomHeaderView(titleText: "Recent Updates")
+            }).listRowSeparator(.hidden)
+      
+        
+            //MARK: - View Updates
+            Section(header: HStack {
+                CustomHeaderView(titleText: "Viewed Updates")
+                Spacer()
+            }.listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                .background(Color.white)
+                    , content: {
+                ForEach(dataForViewedUpdates, id: \.id) { result in
+                    StatusCell(nameText: result.nameText, timeText: result.timeText)
                 }
-                    .listRowSeparator(.hidden)
-                    
-                Section {
-                    ForEach(dataTwo, id: \.id) { result in
-                        StatusCell(nameText: result.nameText, timeText: result.timeText)
-                    }
-                } header: {
-                    CustomHeaderView(titleText: "Views Updates")
-                }
-                    .listRowSeparator(.hidden)
-            }.listStyle(.plain)
-                
+            }).listRowSeparator(.hidden)
             
-        }.background {
-            Color.white
-        }
-         
+        }.listStyle(.plain)
+          
     }
 }
 

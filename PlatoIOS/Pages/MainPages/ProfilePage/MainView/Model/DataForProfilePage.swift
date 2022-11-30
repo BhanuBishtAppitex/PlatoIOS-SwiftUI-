@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ModelForProfilePage {
+struct DataForProfilePage {
     static let data: [SettingsPageData] = [
         SettingsPageData(iconImage: "ProfilePageIcon-1", mainTitle: "Discover"),
         SettingsPageData(iconImage: "ProfilePageIcon-2", mainTitle: "Games"),

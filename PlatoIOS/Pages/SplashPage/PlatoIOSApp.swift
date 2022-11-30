@@ -11,7 +11,7 @@ import SwiftUI
 struct PlatoIOSApp: App {
     var body: some Scene {
         WindowGroup {
-          MainTabBar()
+          IntroductoryPage()
         }
     }
 }

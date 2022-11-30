@@ -9,34 +9,41 @@ import SwiftUI
 
 struct MessagesPage: View {
     @State var isNavigationBarHidden: Bool = true
+    @State var navBarHidden: Bool = true
     @State var isLinkActivated: Bool = false
     let data = ModelForMessagesPage.data
     var body: some View {
         NavigationView {
-            VStack {
-                ZStack {
-                    Color.white
-                    VStack(spacing: 0){
-                        TopBarView(titleText: "Messages", rightIcon: "SearchIcon")
-                        List {
-                            ForEach(data, id: \.id) { result in
-                                ZStack {
-                                    NavigationLink(destination: ChatView(), isActive: $isLinkActivated) {
-                                        EmptyView()
-                                    }.opacity(0)
-                                  
-                                    MessagesCell(isSeen: result.isSeen, profileImage: result.profileImage, nameText: result.nameText, messageText: result.messsageText, timeText: result.timeText, notificationText: result.notificationText)
-                                }
-                            }
-                        }.listStyle(.plain)
-                        
+            //MARK: - Main View
+            VStack(spacing: 0){
+                TopBarView(titleText: "Messages", rightIcon: "SearchIcon")
+                //MARK: - Message View
+                List {
+                    ForEach(data, id: \.id) { result in
+                        ZStack {
+                            NavigationLink(destination: ChatView(),
+                                            isActive: $isLinkActivated) {
+                                EmptyView()
+                            }.opacity(0)
+                            
+                            MessagesCell(isSeen: result.isSeen,
+                                            profileImage: result.profileImage,
+                                            nameText: result.nameText,
+                                            messageText: result.messsageText,
+                                            timeText: result.timeText,
+                                            notificationText: result.notificationText)
+                        }
                     }
+                }.listStyle(.plain)
+            }.ignoresSafeArea()
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarTitle("Hidden Title")
+                .navigationBarHidden(self.navBarHidden)
+                .onAppear {
+                    self.navBarHidden = true
                 }
-                .ignoresSafeArea()
-                // .navigationBarBackButtonHidden(true)
-                .navigationBarHidden(true)
-            }
-        }
+        }.navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
     }
 }
 

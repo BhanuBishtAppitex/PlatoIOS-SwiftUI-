@@ -14,82 +14,72 @@ struct EnterPhoneNumberPage: View {
     
     var body: some View {
         NavigationView {
-            ZStack {
-                Color.white
+            //MARK: - main view
+            VStack(spacing: 26) {
                 
-                VStack {
-                    HStack(alignment: .top){
-                        Text("Phone Number")
-                            .padding(.horizontal, 20)
-                            .padding(.top, 40)
-                            .font(.custom(C.Fonts.Poppins.semiBold, size: 25))
+                //MARK: - top text views
+                //Spacer()
+                Text("Phone Number")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.custom(C.Fonts.Poppins.semiBold, size: 25))
+                    .foregroundColor(Color(C.Colors.textPrimary))
+                Text("A verrification code via SMS will be sent to verify your phone number")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.custom(C.Fonts.Poppins.regular, size: 16))
+                    .foregroundColor(Color(C.Colors.textSecondary))
+                
+               //MARK: - CenterView
+                VStack(spacing:22) {
+                    //MARK: - Country Code Selector
+                    HStack {
+                        Text("India")
+                            .font(.custom(C.Fonts.Poppins.medium, size: 17))
                             .foregroundColor(Color(C.Colors.textPrimary))
+                        Button {
+                            print("Arrow down button pressed")
+                        } label: {
+                            Image("ArrowDown")
+                                .frame(maxWidth: 29, maxHeight: 29)
+                        }
                         Spacer()
-                    }
-                    Text("A verrification code via SMS will be sent to verify your phone number")
-                        .padding(.horizontal, 20)
-                        .padding(.top, 6)
-                        .font(.custom(C.Fonts.Poppins.regular, size: 16))
-                        .foregroundColor(Color(C.Colors.textSecondary))
-                    
-                    ZStack {
-                        
-                        HStack {
-                            Text("India")
-                                .font(.custom(C.Fonts.Poppins.medium, size: 17))
-                                .foregroundColor(Color(C.Colors.textPrimary))
-                            Button {
-                                print("Arrow down button pressed")
-                            } label: {
-                                Image("ArrowDown")
-                                    .frame(maxWidth: 29, maxHeight: 29)
-                            }
-                            Spacer()
-                            Image("ArrowRight")
-                        }.padding()
-                            .background {
-                                RoundedRectangle(cornerRadius: 10)
-                                    .foregroundColor(Color(C.Colors.accentBlur))
-                            }
-                    }.frame(maxHeight: 50)
-                        .padding()
-            
-                    
+                        Image("ArrowRight")
+                    }.padding()
+                        .background {
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundColor(Color(C.Colors.accentBlur))
+                        }
+                    //MARK: - Enter Phone number view
                     HStack(spacing: 18){
                         Text("+91")
                             .font(.custom(C.Fonts.Poppins.medium, size: 17))
-                        VStack{
-                            TextField("Phone Number", text: $phoneNumberTF)
-                                 .padding()
-                            Rectangle()
-                                .foregroundColor(.gray)
-                                .frame(maxHeight: 1)
-                        }
-                    }.padding()
-                    
-                    Spacer()
-                    
-                    NavigationLink(destination: OTPVerificationPage(), isActive: $isLinkActivate) {
-                        Button {
-                            print("Get Verification Code pressed")
-                            self.isLinkActivate = true
-                            
-                        } label: {
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                    .frame(maxHeight: 49)
-                                    .padding()
-                                Text("Get Verification Code")
-                                    .foregroundColor(.white)
-                                    .font(.custom(C.Fonts.Poppins.semiBold, size: 17))
-                            }
+                        CustomTextField(text: phoneNumberTF, placeholderText: " Phone Number")
+                    }
+                }
+                
+                Spacer()
+                
+                //MARK: - Button
+                NavigationLink(destination: OTPVerificationPage(), isActive: $isLinkActivate) {
+                    Button {
+                        print("Get Verification Code pressed")
+                        self.isLinkActivate = true
+                        
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .frame(maxHeight: 49)
+                                .padding()
+                            Text("Get Verification Code")
+                                .foregroundColor(.white)
+                                .font(.custom(C.Fonts.Poppins.semiBold, size: 17))
                         }
                     }
                 }
             }
-        }.navigationBarBackButtonHidden(true)
-            .navigationBarHidden(true)
             .ignoresSafeArea()
+            .padding()
+        } .navigationBarBackButtonHidden(true)
+          .navigationBarHidden(true)
     }
 }
 

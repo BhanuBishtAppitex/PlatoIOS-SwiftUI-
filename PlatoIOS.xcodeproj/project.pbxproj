@@ -12,8 +12,8 @@
 		522B65ED2935C51000AB8367 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B65EC2935C51000AB8367 /* MainTabBar.swift */; };
 		522B65F42935C6F500AB8367 /* CallsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B65F32935C6F500AB8367 /* CallsPage.swift */; };
 		522B65F62935C71300AB8367 /* StatusPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B65F52935C71300AB8367 /* StatusPage.swift */; };
-		522B65FB2935C99400AB8367 /* ModelForStatusPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B65FA2935C99400AB8367 /* ModelForStatusPage.swift */; };
-		522D7A4A2934E1A70059668A /* ModelForProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D7A492934E1A70059668A /* ModelForProfilePage.swift */; };
+		522B65FB2935C99400AB8367 /* ModelForRecentUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B65FA2935C99400AB8367 /* ModelForRecentUpdates.swift */; };
+		522D7A4A2934E1A70059668A /* DataForProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D7A492934E1A70059668A /* DataForProfilePage.swift */; };
 		526FF2F62934C8F700A193BD /* MessagesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF2F52934C8F700A193BD /* MessagesPage.swift */; };
 		526FF2F92934CA0A00A193BD /* MessagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF2F82934CA0A00A193BD /* MessagesCell.swift */; };
 		526FF2FE2934CC3F00A193BD /* ModelForMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF2FD2934CC3F00A193BD /* ModelForMessages.swift */; };
@@ -49,8 +49,8 @@
 		522B65EC2935C51000AB8367 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		522B65F32935C6F500AB8367 /* CallsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsPage.swift; sourceTree = "<group>"; };
 		522B65F52935C71300AB8367 /* StatusPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPage.swift; sourceTree = "<group>"; };
-		522B65FA2935C99400AB8367 /* ModelForStatusPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForStatusPage.swift; sourceTree = "<group>"; };
-		522D7A492934E1A70059668A /* ModelForProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForProfilePage.swift; sourceTree = "<group>"; };
+		522B65FA2935C99400AB8367 /* ModelForRecentUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForRecentUpdates.swift; sourceTree = "<group>"; };
+		522D7A492934E1A70059668A /* DataForProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForProfilePage.swift; sourceTree = "<group>"; };
 		526FF2F52934C8F700A193BD /* MessagesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesPage.swift; sourceTree = "<group>"; };
 		526FF2F82934CA0A00A193BD /* MessagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesCell.swift; sourceTree = "<group>"; };
 		526FF2FD2934CC3F00A193BD /* ModelForMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForMessages.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		522B65F92935C98100AB8367 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				522B65FA2935C99400AB8367 /* ModelForStatusPage.swift */,
+				522B65FA2935C99400AB8367 /* ModelForRecentUpdates.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,7 +183,6 @@
 				522B65EE2935C6AB00AB8367 /* StatusPage */,
 				526FF2F42934C8E900A193BD /* MessagesPage */,
 				522B65EF2935C6D700AB8367 /* CallsPage */,
-				526FF2FF2934D53900A193BD /* SettingPage */,
 				526FF3092934DBB700A193BD /* ProfilePage */,
 			);
 			path = MainPages;
@@ -261,9 +260,8 @@
 		526FF3092934DBB700A193BD /* ProfilePage */ = {
 			isa = PBXGroup;
 			children = (
-				526FF30E2934E15A00A193BD /* Model */,
-				526FF30D2934E15600A193BD /* View */,
-				526FF30C2934E14A00A193BD /* Controller */,
+				52FF74A229373CA9001748E4 /* MainView */,
+				52FF74A129373CA3001748E4 /* SubView */,
 			);
 			path = ProfilePage;
 			sourceTree = "<group>";
@@ -286,7 +284,7 @@
 		526FF30E2934E15A00A193BD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				522D7A492934E1A70059668A /* ModelForProfilePage.swift */,
+				522D7A492934E1A70059668A /* DataForProfilePage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -401,16 +399,8 @@
 			children = (
 				52E71614293491EC00B856E0 /* Model */,
 				52E71613293491E500B856E0 /* View */,
-				52E71612293491DB00B856E0 /* Controller */,
 			);
 			path = IntroductoryPage;
-			sourceTree = "<group>";
-		};
-		52E71612293491DB00B856E0 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		52E71613293491E500B856E0 /* View */ = {
@@ -442,9 +432,7 @@
 		52E7161A2934977100B856E0 /* EnterPhoneNumberPage */ = {
 			isa = PBXGroup;
 			children = (
-				52E7161E2934979100B856E0 /* Model */,
 				52E7161D2934978D00B856E0 /* View */,
-				52E7161C2934978400B856E0 /* Controller */,
 			);
 			path = EnterPhoneNumberPage;
 			sourceTree = "<group>";
@@ -452,18 +440,9 @@
 		52E7161B2934977900B856E0 /* EnterOTPPage */ = {
 			isa = PBXGroup;
 			children = (
-				52E716232934ABC200B856E0 /* Model */,
 				52E716222934ABBD00B856E0 /* View */,
-				52E716212934ABB400B856E0 /* Controller */,
 			);
 			path = EnterOTPPage;
-			sourceTree = "<group>";
-		};
-		52E7161C2934978400B856E0 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		52E7161D2934978D00B856E0 /* View */ = {
@@ -474,20 +453,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		52E7161E2934979100B856E0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		52E716212934ABB400B856E0 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		52E716222934ABBD00B856E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -496,43 +461,38 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		52E716232934ABC200B856E0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		52E716262934B45700B856E0 /* AddCoverImagePage */ = {
 			isa = PBXGroup;
 			children = (
-				52E716292934B47E00B856E0 /* Model */,
 				52E716282934B47B00B856E0 /* View */,
-				52E716272934B47700B856E0 /* Controller */,
 			);
 			path = AddCoverImagePage;
-			sourceTree = "<group>";
-		};
-		52E716272934B47700B856E0 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				52E7162A2934B48D00B856E0 /* AddCoverImagePage.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		52E716282934B47B00B856E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				52E7162A2934B48D00B856E0 /* AddCoverImagePage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		52E716292934B47E00B856E0 /* Model */ = {
+		52FF74A129373CA3001748E4 /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				526FF2FF2934D53900A193BD /* SettingPage */,
 			);
-			path = Model;
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		52FF74A229373CA9001748E4 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				526FF30E2934E15A00A193BD /* Model */,
+				526FF30D2934E15600A193BD /* View */,
+				526FF30C2934E14A00A193BD /* Controller */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -624,8 +584,8 @@
 				526FF3062934D57000A193BD /* SettingPageRow.swift in Sources */,
 				52E71616293491FD00B856E0 /* ModelForIntroductoryPage.swift in Sources */,
 				526FF2F92934CA0A00A193BD /* MessagesCell.swift in Sources */,
-				522D7A4A2934E1A70059668A /* ModelForProfilePage.swift in Sources */,
-				522B65FB2935C99400AB8367 /* ModelForStatusPage.swift in Sources */,
+				522D7A4A2934E1A70059668A /* DataForProfilePage.swift in Sources */,
+				522B65FB2935C99400AB8367 /* ModelForRecentUpdates.swift in Sources */,
 				522B65F62935C71300AB8367 /* StatusPage.swift in Sources */,
 				52E7162B2934B48D00B856E0 /* AddCoverImagePage.swift in Sources */,
 				52E7160D293487A400B856E0 /* Colors.swift in Sources */,
