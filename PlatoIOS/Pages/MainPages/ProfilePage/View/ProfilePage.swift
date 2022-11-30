@@ -12,6 +12,7 @@ struct ProfilePage: View {
     var body: some View {
         
         VStack(spacing: 0) {
+            TopBarView(titleText: "Profile")
             ZStack(alignment: .center) {
                 Color(C.Colors.accentBlur)
                 RoundedRectangle(cornerRadius: 10)
@@ -32,11 +33,12 @@ struct ProfilePage: View {
             } .frame(maxHeight: 218)
             List {
                 ForEach(data, id: \.id) { result in
-                    ProfilePageRow(data: profilePageData(iconImage: result.iconImage, mainTitle: result.mainTitle))
+                    SettingPageRow(imageText: result.iconImage, mainTitle: result.mainTitle)
                 }
-            }
+            }.listStyle(.plain)
+
             Spacer()
-        }
+        }.ignoresSafeArea()
     }
 }
 

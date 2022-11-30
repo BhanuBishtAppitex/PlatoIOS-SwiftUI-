@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TopBarView: View {
     var titleText: String
+    var rightIcon: String = ""
     var body: some View {
         VStack {
             Rectangle()
@@ -20,8 +21,17 @@ struct TopBarView: View {
                             .font(.custom(C.Fonts.Poppins.semiBold, size: 30))
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity, alignment: .leading)
+                        Spacer()
+                        Button {
+                            print("button pressed")
+                        } label: {
+                            Image(rightIcon)
+                                .resizable()
+                                .frame(width: 24, height: 24, alignment: .center)
+                        }
+
                     }.padding()
-                        .padding(.top, 20)
+                        .padding(.top, 30)
                 }
             Spacer()
         }.ignoresSafeArea()

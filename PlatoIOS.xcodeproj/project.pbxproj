@@ -14,9 +14,8 @@
 		522B65F62935C71300AB8367 /* StatusPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B65F52935C71300AB8367 /* StatusPage.swift */; };
 		522B65FB2935C99400AB8367 /* ModelForStatusPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B65FA2935C99400AB8367 /* ModelForStatusPage.swift */; };
 		522D7A4A2934E1A70059668A /* ModelForProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D7A492934E1A70059668A /* ModelForProfilePage.swift */; };
-		522D7A4D2934E3990059668A /* ProfilePageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D7A4C2934E3990059668A /* ProfilePageRow.swift */; };
 		526FF2F62934C8F700A193BD /* MessagesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF2F52934C8F700A193BD /* MessagesPage.swift */; };
-		526FF2F92934CA0A00A193BD /* MessagesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF2F82934CA0A00A193BD /* MessagesRow.swift */; };
+		526FF2F92934CA0A00A193BD /* MessagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF2F82934CA0A00A193BD /* MessagesCell.swift */; };
 		526FF2FE2934CC3F00A193BD /* ModelForMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF2FD2934CC3F00A193BD /* ModelForMessages.swift */; };
 		526FF3042934D56000A193BD /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF3032934D56000A193BD /* SettingsPage.swift */; };
 		526FF3062934D57000A193BD /* SettingPageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526FF3052934D57000A193BD /* SettingPageRow.swift */; };
@@ -41,6 +40,7 @@
 		52E716202934979F00B856E0 /* EnterPhoneNumberPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7161F2934979F00B856E0 /* EnterPhoneNumberPage.swift */; };
 		52E716252934ABE000B856E0 /* OTPVerificationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E716242934ABE000B856E0 /* OTPVerificationPage.swift */; };
 		52E7162B2934B48D00B856E0 /* AddCoverImagePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7162A2934B48D00B856E0 /* AddCoverImagePage.swift */; };
+		52FF74A02937188A001748E4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF749F2937188A001748E4 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,9 +51,8 @@
 		522B65F52935C71300AB8367 /* StatusPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPage.swift; sourceTree = "<group>"; };
 		522B65FA2935C99400AB8367 /* ModelForStatusPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForStatusPage.swift; sourceTree = "<group>"; };
 		522D7A492934E1A70059668A /* ModelForProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForProfilePage.swift; sourceTree = "<group>"; };
-		522D7A4C2934E3990059668A /* ProfilePageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageRow.swift; sourceTree = "<group>"; };
 		526FF2F52934C8F700A193BD /* MessagesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesPage.swift; sourceTree = "<group>"; };
-		526FF2F82934CA0A00A193BD /* MessagesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesRow.swift; sourceTree = "<group>"; };
+		526FF2F82934CA0A00A193BD /* MessagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesCell.swift; sourceTree = "<group>"; };
 		526FF2FD2934CC3F00A193BD /* ModelForMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForMessages.swift; sourceTree = "<group>"; };
 		526FF3032934D56000A193BD /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
 		526FF3052934D57000A193BD /* SettingPageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPageRow.swift; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		52E7161F2934979F00B856E0 /* EnterPhoneNumberPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberPage.swift; sourceTree = "<group>"; };
 		52E716242934ABE000B856E0 /* OTPVerificationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationPage.swift; sourceTree = "<group>"; };
 		52E7162A2934B48D00B856E0 /* AddCoverImagePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoverImagePage.swift; sourceTree = "<group>"; };
+		52FF749F2937188A001748E4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +133,6 @@
 		522B65F02935C6E100AB8367 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				522B65F32935C6F500AB8367 /* CallsPage.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -141,6 +140,7 @@
 		522B65F12935C6E600AB8367 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				522B65F32935C6F500AB8367 /* CallsPage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				526FF2F52934C8F700A193BD /* MessagesPage.swift */,
-				526FF2F82934CA0A00A193BD /* MessagesRow.swift */,
+				526FF2F82934CA0A00A193BD /* MessagesCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -279,7 +279,6 @@
 			isa = PBXGroup;
 			children = (
 				526FF30A2934DBC800A193BD /* ProfilePage.swift */,
-				522D7A4C2934E3990059668A /* ProfilePageRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,6 +296,7 @@
 			children = (
 				527C5AF4293639CE00C2DEA3 /* TopBarView.swift */,
 				527C5AF92936415F00C2DEA3 /* CustomHeaderView.swift */,
+				52FF749F2937188A001748E4 /* Extensions.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -618,13 +618,12 @@
 				522B65F42935C6F500AB8367 /* CallsPage.swift in Sources */,
 				522B65ED2935C51000AB8367 /* MainTabBar.swift in Sources */,
 				526FF3042934D56000A193BD /* SettingsPage.swift in Sources */,
-				522D7A4D2934E3990059668A /* ProfilePageRow.swift in Sources */,
 				52E715EF293482A500B856E0 /* ContentView.swift in Sources */,
 				527C5AFA2936415F00C2DEA3 /* CustomHeaderView.swift in Sources */,
 				52E716112934891700B856E0 /* IntroductoryPage.swift in Sources */,
 				526FF3062934D57000A193BD /* SettingPageRow.swift in Sources */,
 				52E71616293491FD00B856E0 /* ModelForIntroductoryPage.swift in Sources */,
-				526FF2F92934CA0A00A193BD /* MessagesRow.swift in Sources */,
+				526FF2F92934CA0A00A193BD /* MessagesCell.swift in Sources */,
 				522D7A4A2934E1A70059668A /* ModelForProfilePage.swift in Sources */,
 				522B65FB2935C99400AB8367 /* ModelForStatusPage.swift in Sources */,
 				522B65F62935C71300AB8367 /* StatusPage.swift in Sources */,
@@ -637,6 +636,7 @@
 				52E716062934845300B856E0 /* Constants.swift in Sources */,
 				526FF3082934D5E200A193BD /* ModelForSettingsPage.swift in Sources */,
 				52E716252934ABE000B856E0 /* OTPVerificationPage.swift in Sources */,
+				52FF74A02937188A001748E4 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct MainTabBar: View {
+    // will work on all views
+    init() {
+            UITableView.appearance().backgroundColor = .white
+        }
+    
     @State var isNavigationBarHidden: Bool = true
     var body: some View {
         VStack {
@@ -16,13 +21,11 @@ struct MainTabBar: View {
                     .tabItem {
                         Label("Status", image: "Status")
                     }
-             
                 MessagesPage()
                     .tabItem {
                         Label("Messages", image: "Messages")
                         Text("Notes")
                     }
-             
                 CallsPage()
                     .tabItem {
                         Label("Calls", image: "Calls")
@@ -31,8 +34,6 @@ struct MainTabBar: View {
                     .tabItem {
                         Label("Setting", image: "Settings")
                     }
-             
-                    
             }
         }.ignoresSafeArea()
         .navigationBarBackButtonHidden(true)

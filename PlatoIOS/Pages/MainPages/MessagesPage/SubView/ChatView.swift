@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChatView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var text: String = ""
     @State var data =  ChatData.data
     var body: some View {
@@ -18,8 +19,10 @@ struct ChatView: View {
                 .overlay(alignment: .bottomLeading) {
                     HStack {
                         HStack(spacing: 34) {
+                           
                             Button {
                                 print("Back Button Pressed")
+                                self.presentationMode.wrappedValue.dismiss()
                             } label: {
                                 Image("BackArrow")
                             }.padding(.bottom, 10)
@@ -149,7 +152,8 @@ struct MessageView: View {
                     .foregroundColor(backgroundColor)
                     
             }.frame(minHeight: 30)
-        }
+        }.navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
     }
 }
 

@@ -11,7 +11,7 @@ struct DataForCallsPage {
     static let data: [ModelForCallsPage] = [
         ModelForCallsPage(profileImage: "ProfileImage",
                           nameText: "Savannah Nguyen",
-                          callIcon: "IncominCall",
+                          callIcon: "IncomingCall",
                           timeText: "Today, 4:45 Pm",
                           mainCallIcon: "VideoCallIcon"),
         ModelForCallsPage(profileImage: "ProfileImage",

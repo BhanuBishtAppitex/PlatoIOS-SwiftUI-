@@ -23,10 +23,8 @@ struct CallsPage: View {
                         CellForCallsPage(nameText: result.nameText, callIcon: result.callIcon, timeText: result.timeText, mainCallIcon: result.mainCallIcon)
                     }
                 }
-            }
+            }.listStyle(.plain)
         }.ignoresSafeArea()
-            .background(.clear)
-        
     }
 }
 
@@ -45,18 +43,19 @@ struct CellForCallsPage: View {
     var mainCallIcon: String
     var body: some View {
         HStack {
-            Image("ProfileImage")
+            Image(profileImage)
                 .resizable()
                 .frame(width: 50, height: 50, alignment: .center)
             VStack(alignment: .leading) {
-                Text("Savannah Nguyen")
+                Text(nameText)
                 HStack {
-                    Image("IncomingCall")
-                    Text("Tody. 4:45 PM")
+                    Image(callIcon)
+                    Text(timeText)
                 }
             }
             Spacer()
-            Image("CallIcon")
+            Image(mainCallIcon)
+                .tint(.blue)
         }.frame(height: 66)
     }
 }

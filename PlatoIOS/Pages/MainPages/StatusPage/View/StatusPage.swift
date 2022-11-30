@@ -12,27 +12,11 @@ struct StatusPage: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .center) {
-                VStack( spacing: 0) {
-                    Rectangle()
-                        .frame(maxHeight: 113)
-                        .foregroundColor(Color(C.Colors.accentColor))
-                        .overlay(alignment: .bottom) {
-                            HStack{
-                                Text("Status")
-                                    .foregroundColor(.white)
-                                    .padding(.horizontal, 20)
-                                    .font(.custom(C.Fonts.Poppins.semiBold, size: 30))
-                                    .padding(.vertical,20)
-                                Spacer()
-                                Image("SearchIcon")
-                                    .padding(.horizontal, 20)
-                            }
-                        }
-                    
+                Color.white
+                VStack{
+                    TopBarView(titleText: "Status", rightIcon: "SearchIcon")
                     StatusRow()
-                    Spacer()
-                }.ignoresSafeArea()
-                
+                }
             }.ignoresSafeArea()
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarTitle("Hidden Title")
@@ -42,15 +26,12 @@ struct StatusPage: View {
                 }
                 .navigationBarBackButtonHidden(true)
         }
-        
-        
-        
     }
 }
 
 struct StatusPage_Previews: PreviewProvider {
     static var previews: some View {
-        StatusPage()
+       StatusPage()
     }
 }
 
@@ -67,61 +48,26 @@ struct StatusRow: View {
         ZStack {
             Color.white
             List {
-               
                 Section {
                     ForEach(data, id: \.id) { result in
-                        
-                        HStack(spacing: 8) {
-                            Image(result.profileImage)
-                            VStack(alignment: .leading) {
-                                Text(result.nameText)
-                                Text(result.timeText)
-                            }
-                        }
+                        StatusCell(nameText: result.nameText, timeText: result.timeText)
                     }
                 }
                 header: {
-                    HStack {
-                        RoundedRectangle(cornerRadius: 20)
-                            .frame(height: 40)
-                            .frame(maxWidth: 164)
-                            .foregroundColor(Color(C.Colors.accentBlur))
-                            .overlay {
-                                Text("Recent Updates")
-                                    .foregroundColor(Color(C.Colors.accentColor))
-                            }
-                        Spacer()
-                    }
+                    CustomHeaderView(titleText: "Recent Updates")
                 }
-                .listRowSeparator(.hidden)
+                    .listRowSeparator(.hidden)
+                    
                 Section {
                     ForEach(dataTwo, id: \.id) { result in
-                        
-                        HStack(spacing: 8) {
-                            Image(result.profileImage)
-                            VStack(alignment: .leading) {
-                                Text(result.nameText)
-                                Text(result.timeText)
-                            }
-                        }
+                        StatusCell(nameText: result.nameText, timeText: result.timeText)
                     }
                 } header: {
-                    HStack {
-                        RoundedRectangle(cornerRadius: 20)
-                            .frame(height: 40)
-                            .frame(maxWidth: 164)
-                            .foregroundColor(Color(C.Colors.accentBlur))
-                            .overlay {
-                                Text("Views Updates")
-                                    .foregroundColor(Color(C.Colors.accentColor))
-                            }
-                        Spacer()
-                    }
+                    CustomHeaderView(titleText: "Views Updates")
                 }
-                .listRowSeparator(.automatic)
+                    .listRowSeparator(.hidden)
+            }.listStyle(.plain)
                 
-            
-            }
             
         }.background {
             Color.white
@@ -130,8 +76,26 @@ struct StatusRow: View {
     }
 }
 
-struct StatusRowPreviews: PreviewProvider {
-    static var previews: some View {
-        StatusRow()
+
+
+
+//MARK: - Cell View
+struct StatusCell: View {
+    var profileImage: String = "ProfileImage"
+    var nameText: String = "Luhan Danu"
+    var timeText: String = "Today 10:18 PM"
+    var body: some View {
+        HStack(spacing: 8) {
+            Image(profileImage)
+            VStack(alignment: .leading) {
+                Text(nameText)
+                    .font(.custom(C.Fonts.Poppins.medium, size: 17))
+                    .foregroundColor(Color(C.Colors.textPrimary))
+                Text(timeText)
+                    .font(.custom(C.Fonts.Poppins.regular, size: 14))
+                    .foregroundColor(Color(C.Colors.textSecondary))
+            }
+            Spacer()
+        }
     }
 }

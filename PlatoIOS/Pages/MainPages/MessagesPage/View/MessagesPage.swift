@@ -17,40 +17,25 @@ struct MessagesPage: View {
                 ZStack {
                     Color.white
                     VStack(spacing: 0){
-                        Rectangle()
-                            .frame(maxHeight: 113)
-                            .foregroundColor(Color(C.Colors.accentColor))
-                            .overlay(alignment: .bottom) {
-                                HStack{
-                                    Text("Messages")
-                                        .foregroundColor(.white)
-                                        .padding(.horizontal, 20)
-                                        .font(.custom(C.Fonts.Poppins.semiBold, size: 30))
-                                        .padding(.vertical,20)
-                                    Spacer()
-                                    Image("SearchIcon")
-                                        .padding(.horizontal, 20)
-                                }
-                            }
+                        TopBarView(titleText: "Messages", rightIcon: "SearchIcon")
                         List {
                             ForEach(data, id: \.id) { result in
                                 ZStack {
                                     NavigationLink(destination: ChatView(), isActive: $isLinkActivated) {
-                                        MessagesRow(data: MessagesPageData(nameText: result.nameText, messsageText: result.messsageText, timeText: result.timeText, notificationText: result.notificationText))
-                                    }
+                                        EmptyView()
+                                    }.opacity(0)
                                   
-                                  
+                                    MessagesCell(isSeen: result.isSeen, profileImage: result.profileImage, nameText: result.nameText, messageText: result.messsageText, timeText: result.timeText, notificationText: result.notificationText)
                                 }
-                                
-                                .listRowSeparatorTint(.gray)
                             }
-                        }
+                        }.listStyle(.plain)
+                        
                     }
                 }
+                .ignoresSafeArea()
+                // .navigationBarBackButtonHidden(true)
+                .navigationBarHidden(true)
             }
-            .ignoresSafeArea()
-            .navigationBarBackButtonHidden(true)
-            .navigationBarHidden(true)
         }
     }
 }
